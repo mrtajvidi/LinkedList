@@ -1,0 +1,26 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/LinkedList/LinkedList/obj/project.nuget.cache
+/LinkedList/LinkedList/obj/project.assets.json
+/LinkedList/LinkedList/obj/LinkedList.csproj.nuget.g.targets
+/LinkedList/LinkedList/obj/LinkedList.csproj.nuget.g.props
+/LinkedList/LinkedList/obj/LinkedList.csproj.nuget.dgspec.json
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.runtimeconfig.json
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.runtimeconfig.dev.json
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.pdb
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.exe
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.dll
+/LinkedList/LinkedList/bin/Debug/netcoreapp3.1/LinkedList.deps.json
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.pdb
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.genruntimeconfig.cache
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.exe
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.dll
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.csprojAssemblyReference.cache
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.csproj.FileListAbsolute.txt
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.csproj.CoreCompileInputs.cache
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.assets.cache
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.AssemblyInfoInputs.cache
+/LinkedList/LinkedList/obj/Debug/netcoreapp3.1/LinkedList.AssemblyInfo.cs
+*.suo
