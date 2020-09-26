@@ -1,0 +1,44 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=84413eed_002D07fd_002D4d5c_002D89ff_002D1406acac4109/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from AddTwoListsTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;1702705D-BBE5-41DF-B816-C657D77F2A8F/f:AddTwoListsTests.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a761d097_002Da9d9_002D4a2a_002Dbcb9_002D4e574a86a7f8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;Or&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test2&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test32&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test33&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test31&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=de622c9a_002D1b46_002D4f4d_002D8f15_002D8eff820fb654/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test35" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test35&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test36&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test372&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ffa2e6c7_002Df8b4_002D4f3a_002D98a8_002Da35321b6dbd3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.AddTwoListsTests.Test1&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
