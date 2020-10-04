@@ -32,6 +32,21 @@
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c76164eb_002D1e79_002D4c37_002D8857_002D096a9eff3ebf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetIntersectionNode_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.GetIntersectionNode_True&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.GetIntersectionNode_AnotherTrue&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.GetIntersectionNode_False&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=de622c9a_002D1b46_002D4f4d_002D8f15_002D8eff820fb654/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test35" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;Or&gt;&#xD;

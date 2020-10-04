@@ -302,5 +302,29 @@ namespace LinkedList.Logic
 
             return ptr1;
         }
+
+        public ListNode GetIntersectionNode(ListNode headA, ListNode headB)
+        {
+            var visitedNodes = new List<ListNode>();
+            var thisNode = headA;
+
+            while (thisNode != null)
+            {
+                visitedNodes.Add(thisNode);
+                thisNode = thisNode.next;
+            }
+
+            thisNode = headB;
+
+            while (thisNode != null)
+            {
+                if (visitedNodes.Contains(thisNode))
+                    return thisNode;
+
+                thisNode = thisNode.next;
+            }
+
+            return null;
+        }
     }
 }
