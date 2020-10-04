@@ -76,10 +76,5 @@
             pred.Next = pred.Next.Next;
             Size--;
         }
-
-        public bool HasCycle(Node head)
-        {
-            return false;
-        }
     }
 }

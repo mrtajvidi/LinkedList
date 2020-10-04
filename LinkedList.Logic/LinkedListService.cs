@@ -228,5 +228,79 @@ namespace LinkedList.Logic
             return (firstElement < middleElement && middleElement > lastElement) ||
                    (firstElement > middleElement && middleElement < lastElement);
         }
+
+        public bool HasCycle(Node head)
+        {
+            var slowerNode = head;
+            var fasterNode = head;
+
+            var count = 0;
+            while (slowerNode.Next != null)
+            {
+                if (count % 2 == 0)
+                {
+                    slowerNode = slowerNode.Next;
+                }
+
+                if (fasterNode.Next == null)
+                {
+                    return false;
+                }
+
+                fasterNode = fasterNode.Next;
+
+                if (fasterNode.Next == slowerNode)
+                {
+                    return true;
+                }
+                count++;
+            }
+
+            return false;
+        }
+
+        public ListNode GetIntersect(ListNode head)
+        {
+            var slowerNode = head;
+            var fasterNode = head;
+
+            var count = 0;
+            while (fasterNode != null && fasterNode.next != null)
+            {
+                slowerNode = slowerNode.next;
+                fasterNode = fasterNode.next.next;
+
+                if (fasterNode == slowerNode)
+                {
+                    return fasterNode;
+                }
+                count++;
+            }
+            return null;
+        }
+
+        public ListNode DetectCycle(ListNode head)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            ListNode intersect = GetIntersect(head);
+            if (intersect == null)
+            {
+                return null;
+            }
+
+            ListNode ptr1 = head;
+            ListNode ptr2 = intersect;
+            while (ptr1 != ptr2)
+            {
+                ptr1 = ptr1.next;
+                ptr2 = ptr2.next;
+            }
+
+            return ptr1;
+        }
     }
 }

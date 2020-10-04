@@ -147,3 +147,8 @@ obj/
 /LinkedList.Tests/obj/LinkedList.Tests.csproj.nuget.g.targets
 /LinkedList.Tests/obj/LinkedList.Tests.csproj.nuget.g.props
 /LinkedList.Tests/obj/LinkedList.Tests.csproj.nuget.dgspec.json
+.vs/LinkedList/DesignTimeBuild/.dtbcache.v2
+.vs/LinkedList/v16/.suo
+.vs/LinkedList/v16/TestStore/0/000.testlog
+*.v2
+*.testlog
