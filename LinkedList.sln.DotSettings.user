@@ -1,4 +1,44 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=14a99a0c_002D76a7_002D4860_002Dae13_002D4f69c5dcb064/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ReverseList_True" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Or&gt;&#xD;
+      &lt;Or&gt;&#xD;
+        &lt;Or&gt;&#xD;
+          &lt;Or&gt;&#xD;
+            &lt;Or&gt;&#xD;
+              &lt;Or&gt;&#xD;
+                &lt;TestAncestor&gt;&#xD;
+                  &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.ReverseList_True&lt;/TestId&gt;&#xD;
+                &lt;/TestAncestor&gt;&#xD;
+                &lt;TestAncestor&gt;&#xD;
+                  &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.ReverseList_SingleElement_True&lt;/TestId&gt;&#xD;
+                &lt;/TestAncestor&gt;&#xD;
+              &lt;/Or&gt;&#xD;
+              &lt;TestAncestor&gt;&#xD;
+                &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.ReverseList_NoElement_True&lt;/TestId&gt;&#xD;
+              &lt;/TestAncestor&gt;&#xD;
+            &lt;/Or&gt;&#xD;
+            &lt;TestAncestor&gt;&#xD;
+              &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveElements_True&lt;/TestId&gt;&#xD;
+            &lt;/TestAncestor&gt;&#xD;
+          &lt;/Or&gt;&#xD;
+          &lt;TestAncestor&gt;&#xD;
+            &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveElements_SingleElement_True&lt;/TestId&gt;&#xD;
+          &lt;/TestAncestor&gt;&#xD;
+        &lt;/Or&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveElements_SingleElementMatch_True&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Or&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveElements_AnotherSample_True&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+    &lt;/Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveElements_SingleElementNoMatch_True&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=15f77ff5_002Dcdde_002D43ef_002Dbe07_002D22c16be2f960/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HasCycle" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
@@ -8,6 +48,11 @@
       &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.DetectCycle_False&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3a48d404_002Db393_002D4ab7_002Db3b2_002D4c1e3927191d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RemoveNthFromEnd_False" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1702705D-BBE5-41DF-B816-C657D77F2A8F::.NETCoreApp,Version=v3.1::LinkedList.Tests.LinkedListTests.RemoveNthFromEnd_False&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=84413eed_002D07fd_002D4d5c_002D89ff_002D1406acac4109/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from AddTwoListsTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;ProjectFile&gt;1702705D-BBE5-41DF-B816-C657D77F2A8F/f:AddTwoListsTests.cs&lt;/ProjectFile&gt;&#xD;

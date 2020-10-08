@@ -326,5 +326,92 @@ namespace LinkedList.Logic
 
             return null;
         }
+
+        public ListNode RemoveNthFromEnd(ListNode head, int n)
+        {
+            ListNode dummy = new ListNode(0);
+            dummy.next = head;
+            ListNode first = dummy;
+            ListNode second = dummy;
+            for (int i = 1; i <= n + 1; i++)
+            {
+                first = first.next;
+            }
+            // Move first to the end, maintaining the gap
+            while (first != null)
+            {
+                first = first.next;
+                second = second.next;
+            }
+            second.next = second.next.next;
+            return dummy.next;
+        }
+
+        public string GetListValues(ListNode head)
+        {
+            var output = new List<int>();
+            var currentNode = head;
+
+            while (currentNode != null)
+            {
+                output.Add(currentNode.val);
+                currentNode = currentNode.next;
+            }
+            return string.Join(",", output);
+        }
+
+        public ListNode ReverseList(ListNode head)
+        {
+            if (head == null)
+                return null;
+
+            if (head.next == null)
+            {
+                return head;
+            }
+
+            var currentNode = head;
+            var temp = currentNode.next;
+
+            while (temp != null)
+            {
+                currentNode.next = temp.next;
+
+                temp.next = head;
+                head = temp;
+                temp = currentNode.next;
+            }
+
+            return head;
+        }
+
+        public ListNode RemoveElements(ListNode head, int val)
+        {
+            if (head == null)
+                return null;
+
+            if (head.val == val)
+            {
+                head = head.next;
+            }
+
+            var currNode = head;
+            var prevNode = head;
+
+            while (currNode != null)
+            {
+                if (currNode.val == val)
+                {
+                    prevNode.next = currNode.next;
+                }
+                else
+                {
+                    prevNode = currNode;
+                }
+                currNode = currNode.next;
+            }
+
+            return head;
+        }
     }
 }

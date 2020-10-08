@@ -124,5 +124,122 @@ namespace LinkedList.Tests
             var output = _linkedListService.GetIntersectionNode(headA, headB);
             Assert.Null(output);
         }
+
+        [Fact]
+        public void RemoveNthFromEnd_False()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node3 = new ListNode(3);
+            var node4 = new ListNode(4);
+            var node5 = new ListNode(5);
+            head.next = node2;
+            node2.next = node3;
+            node3.next = node4;
+            node4.next = node5;
+            var expectedOutput = "1,2,3,5";
+
+            var output = _linkedListService.RemoveNthFromEnd(head, 2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void ReverseList_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node3 = new ListNode(3);
+            var node4 = new ListNode(4);
+            var node5 = new ListNode(5);
+            head.next = node2;
+            node2.next = node3;
+            node3.next = node4;
+            node4.next = node5;
+
+            var expectedOutput = "5,4,3,2,1";
+            var output = _linkedListService.ReverseList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void ReverseList_SingleElement_True()
+        {
+            var head = new ListNode(1);
+
+            var expectedOutput = "1";
+            var output = _linkedListService.ReverseList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void ReverseList_NoElement_True()
+        {
+            var output = _linkedListService.ReverseList(null);
+            Assert.Null(output);
+        }
+
+        [Fact]
+        public void RemoveElements_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node6 = new ListNode(6);
+            var node3 = new ListNode(3);
+            var node4 = new ListNode(4);
+            var node5 = new ListNode(5);
+            var node66 = new ListNode(6);
+            head.next = node2;
+            node2.next = node6;
+            node6.next = node3;
+            node3.next = node4;
+            node4.next = node5;
+            node5.next = node66;
+
+            var expectedOutput = "1,2,3,4,5";
+            var output = _linkedListService.RemoveElements(head, 6);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void RemoveElements_AnotherSample_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+
+            head.next = node2;
+
+            var expectedOutput = "2";
+            var output = _linkedListService.RemoveElements(head, 1);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void RemoveElements_SingleElementNoMatch_True()
+        {
+            var head = new ListNode(1);
+            var expectedOutput = "1";
+            var output = _linkedListService.RemoveElements(head, 6);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void RemoveElements_SingleElementMatch_True()
+        {
+            var head = new ListNode(1);
+            var output = _linkedListService.RemoveElements(head, 1);
+
+            Assert.Null(output);
+        }
     }
 }
