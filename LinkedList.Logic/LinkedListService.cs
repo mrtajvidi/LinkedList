@@ -387,16 +387,24 @@ namespace LinkedList.Logic
 
         public ListNode RemoveElements(ListNode head, int val)
         {
-            if (head == null)
-                return null;
-
-            if (head.val == val)
+            while (head?.val == val)
             {
                 head = head.next;
+            };
+
+            if (head == null)
+            {
+                return null;
             }
 
-            var currNode = head;
+            if (head.next == null)
+            {
+                return head;
+            }
+
+            var currNode = head.next;
             var prevNode = head;
+            var newHead = head;
 
             while (currNode != null)
             {

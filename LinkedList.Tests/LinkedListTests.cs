@@ -212,7 +212,6 @@ namespace LinkedList.Tests
         {
             var head = new ListNode(1);
             var node2 = new ListNode(2);
-
             head.next = node2;
 
             var expectedOutput = "2";
@@ -231,6 +230,18 @@ namespace LinkedList.Tests
             var actualOutput = _linkedListService.GetListValues(output);
 
             Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void RemoveElements_TwoElementsMatch_True()
+        {
+            var head = new ListNode(1);
+            var node1 = new ListNode(1);
+            head.next = node1;
+
+            var output = _linkedListService.RemoveElements(head, 1);
+
+            Assert.Null(output);
         }
 
         [Fact]

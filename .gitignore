@@ -153,3 +153,8 @@ obj/
 *.v2
 *.testlog
 .vs/LinkedList/v16/.suo
+.vs/LinkedList/DesignTimeBuild/.dtbcache.v2
+.vs/LinkedList/v16/.suo
+*.user
+*.testlog
+.vs/LinkedList/v16/.suo
