@@ -7,6 +7,7 @@ namespace LinkedList.Logic
     public class LinkedListService
     {
         private ListNode frontPointer;
+
         public Node AddTwoNumbers(Node num1, Node num2)
         {
             return SumNodes(num1, num2, 0);
@@ -359,7 +360,7 @@ namespace LinkedList.Logic
             return string.Join(",", output);
         }
 
-        public ListNode ReverseList(ListNode head)
+        public ListNode ReverseListV1(ListNode head)
         {
             if (head == null)
                 return null;
@@ -458,38 +459,150 @@ namespace LinkedList.Logic
 
         public bool IsPalindrome(ListNode head)
         {
-            //if (head?.next == null)
-            //{
-            //    return false;
-            //}
+            if (head == null) return true;
 
-            //var currentNode = head;
-            //var temp = currentNode.next;
+            ListNode firstHalfEnd = EndOfFirstHalf(head);
+            ListNode secondHalfStart = ReverseList(firstHalfEnd.next);
 
-            //while (head.val != temp.val)
-            //{
-            //    currentNode.next = temp.next;
+            ListNode p1 = head;
+            ListNode p2 = secondHalfStart;
+            bool result = true;
+            while (result && p2 != null)
+            {
+                if (p1.val != p2.val) result = false;
+                p1 = p1.next;
+                p2 = p2.next;
+            }
 
-            //    temp.next = head;
-            //    head = temp;
-            //    temp = currentNode.next;
-            //}
-
-
-            frontPointer = head;
-            return recursivelyCheck(head);
-
-            return false;
+            // Restore the list and return the result.
+            firstHalfEnd.next = ReverseList(secondHalfStart);
+            return result;
         }
-        private bool recursivelyCheck(ListNode currentNode)
+
+        private ListNode ReverseList(ListNode head)
+        {
+            ListNode prev = null;
+            ListNode curr = head;
+            while (curr != null)
+            {
+                ListNode nextTemp = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = nextTemp;
+            }
+            return prev;
+        }
+
+        private ListNode EndOfFirstHalf(ListNode head)
+        {
+            ListNode fast = head;
+            ListNode slow = head;
+            while (fast.next != null && fast.next.next != null)
+            {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            return slow;
+        }
+
+        public bool IsPalindromeRecursively(ListNode head)
+        {
+            frontPointer = head;
+            return RecursivelyCheck(head);
+        }
+
+        private bool RecursivelyCheck(ListNode currentNode)
         {
             if (currentNode != null)
             {
-                if (!recursivelyCheck(currentNode.next)) return false;
+                if (!RecursivelyCheck(currentNode.next)) return false;
                 if (currentNode.val != frontPointer.val) return false;
                 frontPointer = frontPointer.next;
             }
             return true;
+        }
+
+        public ListNode MergeTwoLists(ListNode l1, ListNode l2)
+        {
+            ListNode prehead = new ListNode(-1);
+
+            ListNode prev = prehead;
+            while (l1 != null && l2 != null)
+            {
+                if (l1.val <= l2.val)
+                {
+                    prev.next = l1;
+                    l1 = l1.next;
+                }
+                else
+                {
+                    prev.next = l2;
+                    l2 = l2.next;
+                }
+                prev = prev.next;
+            }
+            prev.next = l1 ?? l2;
+
+            return prehead.next;
+
+            /*
+            if (l1 == null)
+            {
+                return l2;
+            }
+
+            if (l2 == null)
+            {
+                return l1;
+            }
+
+            var firstPointer = l1;
+            var secondPointer = l2;
+            if (l1.val > l2.val)
+            {
+                firstPointer = l2;
+                secondPointer = l1;
+            }
+
+            var newHead = new ListNode(firstPointer.val);
+            var currNode = newHead;
+            firstPointer = firstPointer.next;
+
+            while (firstPointer != null && secondPointer != null)
+            {
+                while (firstPointer?.val < secondPointer?.val)
+                {
+                    currNode.next = new ListNode(firstPointer.val);
+                    firstPointer = firstPointer.next;
+                    currNode = currNode.next;
+                }
+                //firstPointer = firstPointer?.next;
+
+                while (secondPointer?.val < firstPointer?.val)
+                {
+                    currNode.next = new ListNode(secondPointer.val);
+                    secondPointer = secondPointer.next;
+                    currNode = currNode.next;
+                }
+                secondPointer = secondPointer?.next;
+            }
+
+            while (firstPointer != null)
+            {
+                currNode.next = new ListNode(firstPointer.val);
+                currNode = currNode.next;
+                firstPointer = firstPointer.next;
+            }
+
+            while (secondPointer != null)
+            {
+                currNode.next = new ListNode(secondPointer.val);
+                currNode = currNode.next;
+                secondPointer = secondPointer.next;
+            }
+            
+
+            return newHead;*/
         }
     }
 }

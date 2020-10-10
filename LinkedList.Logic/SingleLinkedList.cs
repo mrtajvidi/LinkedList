@@ -1,11 +1,11 @@
 ﻿namespace LinkedList.Logic
 {
-    public class MyLinkedList
+    public class SingleLinkedList
     {
         public int Size { get; set; }
         public Node Head { get; set; }
 
-        public MyLinkedList()
+        public SingleLinkedList()
         {
             Size = 0;
             Head = new Node(0);

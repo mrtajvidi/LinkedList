@@ -158,7 +158,7 @@ namespace LinkedList.Tests
             node4.next = node5;
 
             var expectedOutput = "5,4,3,2,1";
-            var output = _linkedListService.ReverseList(head);
+            var output = _linkedListService.ReverseListV1(head);
             var actualOutput = _linkedListService.GetListValues(output);
 
             Assert.Equal(expectedOutput, actualOutput);
@@ -170,7 +170,7 @@ namespace LinkedList.Tests
             var head = new ListNode(1);
 
             var expectedOutput = "1";
-            var output = _linkedListService.ReverseList(head);
+            var output = _linkedListService.ReverseListV1(head);
             var actualOutput = _linkedListService.GetListValues(output);
 
             Assert.Equal(expectedOutput, actualOutput);
@@ -179,7 +179,7 @@ namespace LinkedList.Tests
         [Fact]
         public void ReverseList_NoElement_True()
         {
-            var output = _linkedListService.ReverseList(null);
+            var output = _linkedListService.ReverseListV1(null);
             Assert.Null(output);
         }
 
@@ -317,7 +317,6 @@ namespace LinkedList.Tests
             Assert.Equal(expectedOutput, actualOutput);
         }
 
-
         [Fact]
         public void IsPalindrome_True()
         {
@@ -334,8 +333,52 @@ namespace LinkedList.Tests
             node33.next = node22;
             node22.next = node11;
 
-            var output = _linkedListService.IsPalindrome(head);
+            var output = _linkedListService.IsPalindromeRecursively(head);
             Assert.True(output);
+        }
+
+        [Fact]
+        public void MergeTwoLists_FirstCase_True()
+        {
+            var list1 = new ListNode(3);
+            var node3 = new ListNode(3);
+            var node5 = new ListNode(5);
+            list1.next = node3;
+            node3.next = node5;
+
+            var list2 = new ListNode(1);
+            var node1 = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node6 = new ListNode(6);
+            list2.next = node1;
+            node1.next = node2;
+            node2.next = node6;
+
+            var expectedOutput = "1,1,2,3,3,5,6";
+            var output = _linkedListService.MergeTwoLists(list1, list2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void MergeTwoLists_SecondCase_True()
+        {
+            var list1 = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node4 = new ListNode(4);
+            list1.next = node2;
+            node2.next = node4;
+
+            var list2 = new ListNode(1);
+            var node3 = new ListNode(3);
+            var node44 = new ListNode(4);
+            list2.next = node3;
+            node3.next = node44;
+
+            var expectedOutput = "1,1,2,3,4,4";
+            var output = _linkedListService.MergeTwoLists(list1, list2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
         }
     }
 }
