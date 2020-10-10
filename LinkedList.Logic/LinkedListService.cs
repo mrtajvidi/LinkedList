@@ -421,5 +421,40 @@ namespace LinkedList.Logic
 
             return head;
         }
+
+        public ListNode OddEvenList(ListNode head)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+
+            if (head.next == null)
+            {
+                return head;
+            }
+
+            var trailingOdd = head;
+            var headEven = head.next;
+            var trailingEven = head.next;
+
+            var oddPtr = trailingEven.next;
+            var evenPtr = oddPtr?.next;
+
+            while (oddPtr != null)
+            {
+                trailingOdd.next = oddPtr;
+                trailingEven.next = evenPtr;
+
+                trailingOdd = oddPtr;
+                trailingEven = evenPtr;
+                trailingOdd.next = headEven;
+
+                oddPtr = trailingEven?.next;
+                evenPtr = oddPtr?.next;
+            }
+
+            return head;
+        }
     }
 }

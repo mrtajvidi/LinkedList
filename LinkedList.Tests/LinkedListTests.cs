@@ -252,5 +252,69 @@ namespace LinkedList.Tests
 
             Assert.Null(output);
         }
+
+        [Fact]
+        public void OddEvenList_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node3 = new ListNode(3);
+            var node4 = new ListNode(4);
+            var node5 = new ListNode(5);
+            var node6 = new ListNode(6);
+            var node7 = new ListNode(7);
+            var node8 = new ListNode(8);
+            head.next = node2;
+            node2.next = node3;
+            node3.next = node4;
+            node4.next = node5;
+            node5.next = node6;
+            node6.next = node7;
+            node7.next = node8;
+
+            var expectedOutput = "1,3,5,7,2,4,6,8";
+            var output = _linkedListService.OddEvenList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void OddEvenList_TwoElementList_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            head.next = node2;
+
+            var expectedOutput = "1,2";
+            var output = _linkedListService.OddEvenList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void OddEvenList_SingleElementList_True()
+        {
+            var head = new ListNode(1);
+
+            var expectedOutput = "1";
+            var output = _linkedListService.OddEvenList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void OddEvenList_ThreeElementList_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node3 = new ListNode(3);
+            head.next = node2;
+            node2.next = node3;
+
+            var expectedOutput = "1,3,2";
+            var output = _linkedListService.OddEvenList(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }
