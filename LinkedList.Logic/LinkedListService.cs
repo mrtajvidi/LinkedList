@@ -544,65 +544,6 @@ namespace LinkedList.Logic
             prev.next = l1 ?? l2;
 
             return prehead.next;
-
-            /*
-            if (l1 == null)
-            {
-                return l2;
-            }
-
-            if (l2 == null)
-            {
-                return l1;
-            }
-
-            var firstPointer = l1;
-            var secondPointer = l2;
-            if (l1.val > l2.val)
-            {
-                firstPointer = l2;
-                secondPointer = l1;
-            }
-
-            var newHead = new ListNode(firstPointer.val);
-            var currNode = newHead;
-            firstPointer = firstPointer.next;
-
-            while (firstPointer != null && secondPointer != null)
-            {
-                while (firstPointer?.val < secondPointer?.val)
-                {
-                    currNode.next = new ListNode(firstPointer.val);
-                    firstPointer = firstPointer.next;
-                    currNode = currNode.next;
-                }
-                //firstPointer = firstPointer?.next;
-
-                while (secondPointer?.val < firstPointer?.val)
-                {
-                    currNode.next = new ListNode(secondPointer.val);
-                    secondPointer = secondPointer.next;
-                    currNode = currNode.next;
-                }
-                secondPointer = secondPointer?.next;
-            }
-
-            while (firstPointer != null)
-            {
-                currNode.next = new ListNode(firstPointer.val);
-                currNode = currNode.next;
-                firstPointer = firstPointer.next;
-            }
-
-            while (secondPointer != null)
-            {
-                currNode.next = new ListNode(secondPointer.val);
-                currNode = currNode.next;
-                secondPointer = secondPointer.next;
-            }
-            
-
-            return newHead;*/
         }
     }
 }
