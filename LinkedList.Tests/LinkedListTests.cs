@@ -316,5 +316,26 @@ namespace LinkedList.Tests
             var actualOutput = _linkedListService.GetListValues(output);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+
+        [Fact]
+        public void IsPalindrome_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node3 = new ListNode(3);
+            var node33 = new ListNode(3);
+            var node22 = new ListNode(2);
+            var node11 = new ListNode(1);
+
+            head.next = node2;
+            node2.next = node3;
+            node3.next = node33;
+            node33.next = node22;
+            node22.next = node11;
+
+            var output = _linkedListService.IsPalindrome(head);
+            Assert.True(output);
+        }
     }
 }

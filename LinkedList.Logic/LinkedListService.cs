@@ -6,6 +6,7 @@ namespace LinkedList.Logic
 {
     public class LinkedListService
     {
+        private ListNode frontPointer;
         public Node AddTwoNumbers(Node num1, Node num2)
         {
             return SumNodes(num1, num2, 0);
@@ -264,7 +265,6 @@ namespace LinkedList.Logic
             var slowerNode = head;
             var fasterNode = head;
 
-            var count = 0;
             while (fasterNode != null && fasterNode.next != null)
             {
                 slowerNode = slowerNode.next;
@@ -274,7 +274,6 @@ namespace LinkedList.Logic
                 {
                     return fasterNode;
                 }
-                count++;
             }
             return null;
         }
@@ -455,6 +454,42 @@ namespace LinkedList.Logic
             }
 
             return head;
+        }
+
+        public bool IsPalindrome(ListNode head)
+        {
+            //if (head?.next == null)
+            //{
+            //    return false;
+            //}
+
+            //var currentNode = head;
+            //var temp = currentNode.next;
+
+            //while (head.val != temp.val)
+            //{
+            //    currentNode.next = temp.next;
+
+            //    temp.next = head;
+            //    head = temp;
+            //    temp = currentNode.next;
+            //}
+
+
+            frontPointer = head;
+            return recursivelyCheck(head);
+
+            return false;
+        }
+        private bool recursivelyCheck(ListNode currentNode)
+        {
+            if (currentNode != null)
+            {
+                if (!recursivelyCheck(currentNode.next)) return false;
+                if (currentNode.val != frontPointer.val) return false;
+                frontPointer = frontPointer.next;
+            }
+            return true;
         }
     }
 }
