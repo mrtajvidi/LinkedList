@@ -545,5 +545,32 @@ namespace LinkedList.Logic
 
             return prehead.next;
         }
+
+
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            var carryOver = 0;
+            var head = new ListNode(-1);
+            var currentNode = head;
+
+            while (l1 != null || l2 != null)
+            {
+                var sum = (l1?.val ?? 0) + (l2?.val ?? 0) + carryOver;
+                var remainder = sum % 10;
+                carryOver = sum / 10;
+                currentNode.next = new ListNode(remainder);
+                l1 = l1?.next;
+                l2 = l2?.next;
+                currentNode = currentNode.next;
+            }
+
+            if (carryOver > 0)
+            {
+                currentNode.next = new ListNode(carryOver);
+            }
+
+            return head.next;
+
+        }
     }
 }

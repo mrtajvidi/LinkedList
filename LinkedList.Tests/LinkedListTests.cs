@@ -380,5 +380,59 @@ namespace LinkedList.Tests
             var actualOutput = _linkedListService.GetListValues(output);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        [Fact]
+        public void AddTwoNumbers_FirstCase_True()
+        {
+            var list1 = new ListNode(7);
+            var node8 = new ListNode(8);
+            var node3 = new ListNode(3);
+            list1.next = node8;
+            node8.next = node3;
+
+            var list2 = new ListNode(4);
+            var node5 = new ListNode(5);
+            var node6 = new ListNode(6);
+            var node7 = new ListNode(7);
+            list2.next = node5;
+            node5.next = node6;
+            node6.next = node7;
+
+            var expectedOutput = "1,4,0,8";
+            var output = _linkedListService.AddTwoNumbers(list1, list2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+
+        [Fact]
+        public void AddTwoNumbers_SecondCase_True()
+        {
+            var list1 = new ListNode(9);
+            var node90 = new ListNode(9);
+            var node91 = new ListNode(9);
+            var node92 = new ListNode(9);
+            var node93 = new ListNode(9);
+            var node94 = new ListNode(9);
+            var node95 = new ListNode(9);
+            list1.next = node90;
+            node90.next = node91;
+            node91.next = node92;
+            node92.next = node93;
+            node93.next = node94;
+            node94.next = node95;
+
+            var list2 = new ListNode(9);
+            var node96 = new ListNode(9);
+            var node97 = new ListNode(9);
+            var node98 = new ListNode(9);
+            list2.next = node96;
+            node96.next = node97;
+            node97.next = node98;
+
+            var expectedOutput = "8,9,9,9,0,0,0,1";
+            var output = _linkedListService.AddTwoNumbers(list1, list2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
 }
