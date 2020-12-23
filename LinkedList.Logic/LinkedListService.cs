@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Security;
 
 namespace LinkedList.Logic
 {
@@ -384,6 +385,7 @@ namespace LinkedList.Logic
 
             return head;
         }
+        
 
         public ListNode RemoveElements(ListNode head, int val)
         {
@@ -546,7 +548,6 @@ namespace LinkedList.Logic
             return prehead.next;
         }
 
-
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             var carryOver = 0;
@@ -570,7 +571,39 @@ namespace LinkedList.Logic
             }
 
             return head.next;
+        }
 
+
+        public ListNode AddTwoNumbers2(ListNode l1, ListNode l2)
+        {
+            var head = new ListNode(-1);
+
+            return head.next;
+        }
+
+        public MLNode Flatten(MLNode head)
+        {
+            var heads = new Dictionary<int, MLNode>();
+            var currentNode = head;
+            
+            int level = 0;
+            heads[0] = head;
+
+            while (true)
+            {
+                if (currentNode?.val != null && currentNode.next == null)
+                {
+                    level++;
+                    heads[level].next = currentNode.next?.next;
+                }
+                else
+                {
+                    heads[level].next = currentNode;
+                    currentNode = currentNode?.next;
+                }
+            }
+
+            return null;
         }
     }
 }

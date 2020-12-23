@@ -1,4 +1,8 @@
-﻿using LinkedList.Logic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+//using System.Linq;
+using LinkedList.Logic;
 using Xunit;
 
 namespace LinkedList.Tests
@@ -434,5 +438,153 @@ namespace LinkedList.Tests
             var actualOutput = _linkedListService.GetListValues(output);
             Assert.Equal(expectedOutput, actualOutput);
         }
+
+        /*
+        [Fact]
+        public void Flatten_FirstCase_True()
+        {
+            var head = new MLNode { val = 1 };
+            var node2 = new MLNode { val = 2 };
+            var node3 = new MLNode { val = 3 };
+            var node4 = new MLNode { val = 4 };
+            var node5 = new MLNode { val = 5 };
+            var node6 = new MLNode { val = 6 };
+            var node6Next = new MLNode();
+            var node6NextNext = new MLNode();
+
+            var node7Prev = new MLNode();
+            var node7 = new MLNode { val = 7 };
+            var node8 = new MLNode { val = 8 };
+            var node9 = new MLNode { val = 9 };
+            var node10 = new MLNode { val = 10 };
+            var node11 = new MLNode { val = 11 };
+            var node12 = new MLNode { val = 12 };
+
+            head.next = node2;
+            
+            node2.prev = head;
+            node2.next = node3;
+
+            node3.next = node4;
+            node3.prev = node2;
+            node3.child = node7;
+
+            node4.next = node5;
+            node4.prev = node3;
+
+            node5.next = node6;
+            node5.prev = node4;
+
+            node6.next = node6Next;
+            node6Next.next = node6NextNext;
+            node6NextNext.next = node7Prev;
+
+            node7.prev = node7Prev;
+            node7.next = node8;
+
+            node8.next = node9;
+            node8.prev = node7;
+            node8.child = node11;
+
+
+            var expectedOutput = "8,9,9,9,0,0,0,1";
+            var output = _linkedListService.AddTwoNumbers(list1, list2);
+            var actualOutput = _linkedListService.GetListValues(output);
+            Assert.Equal(expectedOutput, actualOutput);
+        }
+        */
+
+
+        [Fact]
+        public int test()
+        {
+            var A = new int[] { 4, 0 };
+
+            Array.Sort(A);
+
+            var first = 0;
+            var last = A.Length - 1;
+
+            while (first < last)
+            {
+                if (A[first] == -A[last])
+                    return A[last];
+
+                if (A[first] > -A[last])
+                    last -= 1;
+                else
+                    first += 1;
+
+            }
+
+            return 0;
+
+        }
+
+        //[Fact]
+        //public int Solution()
+        //{
+        //    // write your code in C# 6.0 with .NET 4.5 (Mono)
+
+        //    // we iterate throug the array 
+        //    // store items in a dictionary with key = item and value = numebr of items 
+        //    // return the key with the biggest value  if key = value 
+
+        //    var dictOfItem = new Dictionary<int, int>();
+
+        //    foreach (var item in A)
+        //    {
+
+        //        if (dictOfItem.ContainsKey(item))
+        //        {
+        //            dictOfItem[item] = dictOfItem[item] + 1;
+        //        }
+        //        else
+        //        {
+        //            dictOfItem[item] = 1;
+        //        }
+        //    }
+
+        //    var maxValue = dictOfItem.Values.Max();
+        //    var key = dictOfItem.FirstOrDefault(x => x.Value == maxValue).Key;
+
+        //    if (key == maxValue)
+        //    {
+        //        return key;
+        //    }
+
+        //    return (key == maxValue) ? key : 0;
+
+
+        //}
+
+
+        [Fact]
+        public int solution()
+        {
+            var x = new int[] {1, 1, 1};
+            var y = new int[] {2, 2, 2};
+
+            var dictItems = new Dictionary<int, double>();
+
+            var numberOfPairsThatSumUpToOne = 0;
+            for (int i = 0; i <= x.Length - 1; i++)
+            {
+                var mod = (double) x[i] / (double)y[i];
+
+                var roundedMod = Math.Round(mod, 6);
+
+                if (dictItems.ContainsValue(1.0 - roundedMod))
+                {
+                    numberOfPairsThatSumUpToOne++;
+                }
+                dictItems[i] = roundedMod;
+            }
+
+            return numberOfPairsThatSumUpToOne;
+        }
     }
+
+
+
 }

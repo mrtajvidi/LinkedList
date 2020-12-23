@@ -161,3 +161,5 @@ obj/
 LinkedList.sln.DotSettings.user
 .vs/LinkedList/v16/.suo
 .vs/LinkedList/DesignTimeBuild/.dtbcache.v2
+*.v2
+*.user
