@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-//using System.Linq;
+﻿//using System.Linq;
 using LinkedList.Logic;
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace LinkedList.Tests
@@ -461,7 +460,7 @@ namespace LinkedList.Tests
             var node12 = new MLNode { val = 12 };
 
             head.next = node2;
-            
+
             node2.prev = head;
             node2.next = node3;
 
@@ -486,14 +485,12 @@ namespace LinkedList.Tests
             node8.prev = node7;
             node8.child = node11;
 
-
             var expectedOutput = "8,9,9,9,0,0,0,1";
             var output = _linkedListService.AddTwoNumbers(list1, list2);
             var actualOutput = _linkedListService.GetListValues(output);
             Assert.Equal(expectedOutput, actualOutput);
         }
         */
-
 
         [Fact]
         public int test()
@@ -514,11 +511,9 @@ namespace LinkedList.Tests
                     last -= 1;
                 else
                     first += 1;
-
             }
 
             return 0;
-
         }
 
         //[Fact]
@@ -526,15 +521,14 @@ namespace LinkedList.Tests
         //{
         //    // write your code in C# 6.0 with .NET 4.5 (Mono)
 
-        //    // we iterate throug the array 
-        //    // store items in a dictionary with key = item and value = numebr of items 
-        //    // return the key with the biggest value  if key = value 
+        //    // we iterate throug the array
+        //    // store items in a dictionary with key = item and value = numebr of items
+        //    // return the key with the biggest value  if key = value
 
         //    var dictOfItem = new Dictionary<int, int>();
 
         //    foreach (var item in A)
         //    {
-
         //        if (dictOfItem.ContainsKey(item))
         //        {
         //            dictOfItem[item] = dictOfItem[item] + 1;
@@ -555,22 +549,20 @@ namespace LinkedList.Tests
 
         //    return (key == maxValue) ? key : 0;
 
-
         //}
-
 
         [Fact]
         public int solution()
         {
-            var x = new int[] {1, 1, 1};
-            var y = new int[] {2, 2, 2};
+            var x = new int[] { 1, 1, 1 };
+            var y = new int[] { 2, 2, 2 };
 
             var dictItems = new Dictionary<int, double>();
 
             var numberOfPairsThatSumUpToOne = 0;
             for (int i = 0; i <= x.Length - 1; i++)
             {
-                var mod = (double) x[i] / (double)y[i];
+                var mod = (double)x[i] / (double)y[i];
 
                 var roundedMod = Math.Round(mod, 6);
 
@@ -583,8 +575,29 @@ namespace LinkedList.Tests
 
             return numberOfPairsThatSumUpToOne;
         }
+
+        [Fact]
+        public void ReverseOperations_True()
+        {
+            var head = new ListNode(1);
+            var node2 = new ListNode(2);
+            var node8 = new ListNode(8);
+            var node9 = new ListNode(9);
+            var node12 = new ListNode(12);
+            var node16 = new ListNode(16);
+
+            head.next = node2;
+            node2.next = node8;
+            node8.next = node9;
+            node9.next = node12;
+            node12.next = node16;
+
+
+            var expectedOutput = "1,8,2,9,16,12";
+            var output = _linkedListService.ReverseOperations(head);
+            var actualOutput = _linkedListService.GetListValues(output);
+
+            Assert.Equal(expectedOutput, actualOutput);
+        }
     }
-
-
-
 }

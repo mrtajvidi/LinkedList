@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Security;
 
 namespace LinkedList.Logic
 {
@@ -385,7 +384,6 @@ namespace LinkedList.Logic
 
             return head;
         }
-        
 
         public ListNode RemoveElements(ListNode head, int val)
         {
@@ -573,7 +571,6 @@ namespace LinkedList.Logic
             return head.next;
         }
 
-
         public ListNode AddTwoNumbers2(ListNode l1, ListNode l2)
         {
             var head = new ListNode(-1);
@@ -585,7 +582,7 @@ namespace LinkedList.Logic
         {
             var heads = new Dictionary<int, MLNode>();
             var currentNode = head;
-            
+
             int level = 0;
             heads[0] = head;
 
@@ -604,6 +601,47 @@ namespace LinkedList.Logic
             }
 
             return null;
+        }
+
+        public ListNode ReverseOperations(ListNode head)
+        {
+            if (head == null)
+                return null;
+
+            if (head.next == null)
+            {
+                return head;
+            }
+
+            var currentNode = head;
+            var previousNode = head;
+
+            while (currentNode != null)
+            {
+                if (currentNode.val % 2 != 0)
+                {
+                    previousNode = currentNode;
+                    currentNode = currentNode.next;
+                }
+                else
+                {
+                    var newHead = currentNode;
+                    var temp = currentNode.next;
+
+                    while (temp != null && temp.val % 2 == 0)
+                    {
+                        currentNode.next = temp.next;
+                        temp.next = newHead;
+                        newHead = temp;
+                        temp = currentNode.next;
+                    }
+                    previousNode.next = newHead;
+                    currentNode = temp;
+                    previousNode = currentNode;
+                }
+            }
+
+            return head;
         }
     }
 }
